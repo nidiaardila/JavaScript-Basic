@@ -17,30 +17,27 @@ console.log(edad2);
 
 // - Una lista que contenga el objeto con tus datos personales y un nuevo objeto con los datos personales de tus dos mejores amig@s
 
-const datosP = [datos];
-console.log(datosP);
-
-datosP.push({
+const lista = [
+    {
+        ...datos
+    },{
     nombre: "Miguel",
     apellido: "Mendez",
     edad: 38,
     altura: 175,
     isDeveloper: true   
-})
-datosP.push({
+},{
     nombre: "Maria",
     apellido: "Ligth",
     edad: 35,
     altura: 171,
     isDeveloper: true   
-})
-console.log(datosP);
+}
+]
+console.log(lista);
 
 // - Una nueva lista con los objetos de la lista anterior ordenados por edad, de mayor a menor
 
-const todos = [datosP]
-console.log(datosP);
-console.log("Ordenados")
-datosP.sort((a, b) => b.edad - a.edad)
-console.log(todos);
+const listaOrdenada = lista.sort((a,b)=>b.edad - a.edad)
 
+console.log(listaOrdenada);

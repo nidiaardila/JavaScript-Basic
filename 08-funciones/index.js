@@ -10,9 +10,11 @@ myFunction();
 
 // - Una función asíncrona que utilice un setTimeout y pase por consola un "Hola soy una promesa" 5 segundos después de haberse ejecutado
 
-setTimeout(function(){
-    console.log("Hola soy una promesa");
-}, 5000)
+async function miPromesa() {
+    return setTimeout(() => console.log("Hola soy una promesa"), 5000)
+}
+
+miPromesa();
 
 // - Una función generadora de índices pares automáticos
 

@@ -2,6 +2,17 @@
 
 // - Instala la dependencia Winston
 
+const winston = require("winston");
+
+const logger = winston.createLogger({
+  level: "error",
+  format: winston.format.json(),
+  defaultMeta: { service: "user-service" },
+  transports: [
+    new winston.transports.File({ filename: "error.log", level: "error" }),
+  ],
+});
+
 // - En el archivo index.js crea una función que devuelva un error con un mensaje personalizado
 
 const miFuncion = val => {
